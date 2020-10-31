@@ -2,6 +2,8 @@
 
 ## Steps
 
+1. `ng new exp-ng-pwa-sw`
+
 
 ---
 ## Standard Angular Readme
