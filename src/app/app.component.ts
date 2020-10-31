@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { LogUpdateService } from './services/log-update.service';
+import { CheckForUpdateService } from './services/check-for-update.service';
+import { PromptUpdateService } from './services/prompt-update.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'exp-ng-pwa-sw';
+  title = 'Service worker experiment project';
+  updateAvailable: boolean;
+  constructor(
+    private swLogService: LogUpdateService,
+    private checkUpdateService: CheckForUpdateService,
+    public promptUser: PromptUpdateService
+  ) {
+    console.log('swLogService: ', this.swLogService);
+
+  }
+  onClickReloadPage(): void {
+    document.location.reload();
+  }
+  onClickSeeUpdate(): void {
+    console.log('Click');
+    this.promptUser.activateUpdates();
+  }
 }

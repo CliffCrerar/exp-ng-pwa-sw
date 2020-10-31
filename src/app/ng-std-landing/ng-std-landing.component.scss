@@ -25,30 +25,6 @@ button {
     padding: 10px 20px;
 }
 
-.buttons {
-    display: flex;
-    &:last-child {
-        align-self: end;
-    }
-}
-
-.links {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    li {
-        margin: 0 20px;
-        padding: 10px 20px;
-        border-radius: 4px;
-        a {
-            color: white !important;
-        }
-         :hover {
-            background: rgba(0, 0, 0, 0.2);
-        }
-    }
-}
-
 .spacer {
     flex: 1;
 }
